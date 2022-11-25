@@ -2,7 +2,13 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
+/**
+ * @GovardhanReddy
+ */
 public class SimulateStopWatchProgram {
+    /**
+     * Find the time difference between start click and ens click
+     */
     long startTime =0;
     long endTime = 0;
 
@@ -17,7 +23,7 @@ public class SimulateStopWatchProgram {
         System.out.println("End time - "+endTime/1000+" Seconds");
 
     }
-    public  long diff(){
+    public  long difference(){
         differenceTime = endTime-startTime;
         return differenceTime;
     }
@@ -31,7 +37,7 @@ public class SimulateStopWatchProgram {
         System.out.print("Enter any number time will be ended : ");
         input.nextInt();
         time.end();
-        System.out.println("Elapses time is "+time.diff()/1000+" Seconds");
+        System.out.println("Elapses time is "+time.difference()/1000+" Seconds");
 
     }
 }
