@@ -3,29 +3,35 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class SimulateStopWatchProgram {
+    long startTime =0;
+    long endTime = 0;
+
+    long differenceTime =0;
+    public  void start(){
+        startTime = System.currentTimeMillis();
+        System.out.println("Start time - "+startTime/1000+" Seconds");
+
+    }
+    public  void end(){
+        endTime = System.currentTimeMillis();
+        System.out.println("End time - "+endTime/1000+" Seconds");
+
+    }
+    public  long diff(){
+        differenceTime = endTime-startTime;
+        return differenceTime;
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter the start time in minutes range (0-60) : ");
-        int startMinute = input.nextInt();
-        System.out.print("Enter the start time in seconds range (0-60) : ");
-        int startSecond = input.nextInt();
-        System.out.print("Enter the end time in minutes range (0-60) : ");
-        int endMinute = input.nextInt();
-        System.out.print("Enter the end time in seconds range (0-60) : ");
-        int endSecond = input.nextInt();
-        if (startMinute<=60 && startSecond<=60 && endMinute<=60 && endSecond<=60){
-            int startTime = startMinute*60+startSecond;
-            int endTime = endMinute*60+endSecond;
-            double resultInSeconds = endTime-startTime;
-
-            System.out.println("Elapses time is "+resultInSeconds+" seconds");
-
-
-        }
-        else {
-            System.out.println("Enter the valid details");
-        }
-
+        SimulateStopWatchProgram time = new SimulateStopWatchProgram();
+        System.out.print("Enter any number time will be started : ");
+        input.nextInt();
+        time.start();
+        System.out.print("Enter any number time will be ended : ");
+        input.nextInt();
+        time.end();
+        System.out.println("Elapses time is "+time.diff()/1000+" Seconds");
 
     }
 }
