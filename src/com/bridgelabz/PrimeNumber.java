@@ -11,23 +11,27 @@ public class PrimeNumber {
      * @param number is prime number or not
      */
     public static void primeNumber(int number){
-        int count=0;
-        if (number==0 || number==1){
-            System.out.println(number+" is not prime number");
-            count++;
-        }
-        else {
-            for (int i = 2;i<number;i++){
-                if (number%i ==0){
-                    System.out.println(number+" is not prime number");
-                    count++;
-                    break;
-                }
-            }
-        }
-        if (count==0){
-            System.out.println(number+" is prime number");
-        }
+      if (number >=0 && number<=1 ){
+          System.out.println(number+" is not prime number");
+      } else if (number==2) {
+          System.out.println(number+" is prime number");
+
+      }else {
+          int count = 0;
+          for (int i = 2;i<number;i++){
+              if (number%i==0){
+                  count++;
+                  break;
+              }
+          }
+          if (count==0){
+              System.out.println(number+" is prime number");
+          }
+          else {
+              System.out.println(number+" is not prime number");
+          }
+      }
+
 
     }
 
