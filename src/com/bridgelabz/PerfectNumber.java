@@ -12,7 +12,7 @@ public class PerfectNumber {
      */
     public static int perfectNumber(int number){
         int sumOfFactorNumbers = 0;
-        for (int i = 1; i<=number/2;i++){
+        for (int i = 1; i<number;i++){
             if (number%i==0){
             sumOfFactorNumbers+=i;
             }
@@ -20,7 +20,6 @@ public class PerfectNumber {
         System.out.println("sum of factors - "+sumOfFactorNumbers);
         return sumOfFactorNumbers;
     }
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter number : ");
