@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class FibonacciSeries {
     /**
-     *compute the fibonacci series
+     *compute N terms of the fibonacci series
      */
 
     public static void main(String[] args) {
